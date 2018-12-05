@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+$primary: #1E387F;
+$background: #F5F5F5;
+
+body, html {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 100%;
+  justify-items: center;
+  align-items: center;
+  grid-template-areas: "iface";
+  background: #FAFAFA;
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
+}
+
+p {
+  line-height: 25px;
+}
+
+#app {
+  grid-area: iface;
+  width: 90%;
+  max-width: 1500px;
+  height: 90%;
+
+  .footer {
+    text-align: center;
+    user-select: none;
+    font-size: smaller;
+    padding-top: 10px;
+  }
+
+  .container {
+    background: white;
+    box-shadow: 15px 15px 40px lightgray;
+    overflow: hidden;
+    height: 100%;
+
+    .inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      min-height: 100%;
+
+      nav {
+        display: flex;
+        grid-template-columns: 200px auto;
+        grid-template-areas: "logo nav";
+        align-content: stretch;
+        padding: 30px;
+        position: absolute;
+        z-index: 4;
+        width: 100%;
+        height: 10px;
+        background: rgba(51, 51, 51, 0.90);
+
+        #logo {
+          grid-area: logo;
+          margin: -20px;
+
+          #logoImage {
+            width: 250px;
+            height: 100px;
+          }
+        }
+
+        ul {
+          grid-area: nav;
+          list-style-type: none;
+          justify-self: right;
+          margin: 0;
+
+          li {
+            display: inline;
+
+            a {
+              color: white;
+              font-size: .7em;
+              text-transform: uppercase;
+              padding: 0 15px;
+              font-weight: bold;
+            }
+
+            a:hover {
+              color: #c7a674;
+              animation: arrowAnim 1s forwards;
+            }
+
+            a:active {
+              background: #c7a674;
+              opacity: 0;
+            }
+
+            a:focus {
+              color: black;
+              background: #c7a674;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.main-content {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 42% auto;
+  grid-template-areas: "left right";
+
+  .left-content {
+    padding: 150px 50px 15px 50px;
+
+    .textSmall {
+      margin: 0;
+      font-size: 12px;
+    }
+
+  }
+
+  .right-content {
+    background: $background;
+    display: grid;
+    grid-template-columns: auto;
+    justify-items: center;
+    align-items: center;
+
+    .headertxt {
+      font-size: x-large;
+      font-weight: bold;
+    }
+
+    .header {
+      font-size: large;
+      font-weight: bold;
+    }
+
+    .subtxt {
+      justify-self: center;
+      text-align: center;
+    }
+
+    .midtxt {
+      font-size: 24px;
+      justify-self: center;
+      text-align: center;
+    }
+
+    .buttonTermin {
+      width: 150px;
+      height: 50px;
+    }
+
+    .datenschutz {
+      overflow-y: scroll;
+      max-height: 800px;
+      padding: 10px;
+    }
+
+    .hochzeit {
+      margin-top: 80px;
+    }
+
+    .geburtstag {
+      margin-bottom: 20px;
+    }
+
+    .anreise {
+      margin-bottom: 100px;
+      margin-left: 16px;
+      margin-right: 16px;
+    }
+  }
+
+  //////////////////////////////////////// Arrow navigation
+
+  .arrow {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    right: -21px;
+  }
+
+  .arrow-up {
+    display: block;
+    float: right;
+    top: 150px;
+  }
+
+  .arrow-down {
+    bottom: 80px;
+  }
+
+  .arrow:hover {
+    animation: arrowAnim 1s forwards;
+    opacity: 0;
+  }
+
+  @keyframes arrowAnim {
+    from {
+      opacity: 0;
+      //transform: translateY(100px);
+    }
+    to {
+      opacity: 100;
+      //transform: translateY(0);
+    }
+  }
+
+
+
+  /////////////////////////////////////// Page animation on the page
+
+  .slideUp {
+    animation: slideUpAnim 3s forwards;
+    opacity: 0;
+  }
+
+  @keyframes slideUpAnim {
+    from {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    to {
+      opacity: 100;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideDownNav {
+    from {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    to {
+      opacity: 80;
+      transform: translateX(0);
+    }
+  }
+}
+
+///////////////////////////////////// Page fading animation at routing
+
+.fade-enter-active {
+  animation: slidePageIn 1s forwards;
+  animation-timing-function: cubic-bezier(.8, -0.49, .36, 1);
+}
+
+.fade-leave-active {
+  animation: slidePageDown 1s forwards;
+  animation-timing-function: cubic-bezier(.8, -0.49, .36, 1);
+}
+
+@keyframes slidePageIn {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes slidePageDown {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 01;
+    transform: translateY(100%);
+  }
+}
+
+.centered {
+  text-align: center;
+}
