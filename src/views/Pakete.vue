@@ -1,32 +1,50 @@
 <template>
+    <div>
+        <nav>
+            <div>
+                <router-link to="/musictrunk"><img src="../assets/logoMusictrunk.jpg" class="logoNavMusictrunk button"></router-link>
+            </div>
+            <ul>
+                <li>
+                    <router-link to="/uebermich">Über mich</router-link>
+                </li>
+                <li>
+                    <router-link to="/referenzen">Referenzen</router-link>
+                </li>
+                <li>
+                    <router-link to="/pakete">Pakete</router-link>
+                </li>
+                <li>
+                    <router-link to="/anreise">Anreise</router-link>
+                </li>
+                <li>
+                    <router-link to="/terminkalender">Terminkalender</router-link>
+                </li>
+            </ul>
+        </nav>
     <div class="pakete main-content">
         <div class="left-content slideUp">
             <h1>Pakete ...</h1>
 
             <router-link to="/referenzen"><img src="../assets/arrow-up.svg" class="arrow arrow-up"></router-link>
 
-            <p class="subtxt">Gestatten, ... Götz Schmidt</p>
-            <p class="subtxt">Seit nun fast zehn Jahren bin ich auf diversen Hochzeiten, Geburtstagen und
-                Partys um für die musikalische Untermalung und eine unvergessliche Stimmung zu sorgen.
-                Dabei reizt mich besonders die Herausforderung die unterschiedlichen Facetten einer Hochzeit
-                für einen Abend einzufangen und dem Brautpaar, sowie den Gästen einen unvergesslichen Abend
-                zu bescheren.</p>
-            <p class="subtxt">Über die Jahre habe ich mir eine große Auswahl an bekannten Musiktiteln
-                für die unterschiedlichsten Anlässe zusammengesucht. Angetrieben von der Professionalität
-                hat sich im Laufe der Zeit die ein oder andere technische Verbesserung bezüglich meines
-                Equipments ergeben, womit ich sowohl für kleine, als auch große Veranstaltungen bestens
-                gerüstet bin.</p>
-            <p class="subtxt">Du möchtest mehr Information oder hast bereits eine konkrete Vorstellung?
-                Dann schreib mir doch einfach über das Kontaktformular oder ruf mich direkt zu einem
-                unverbindlichen Gespräch an.</p>
-            <p class="subtxt">Alle nötigen Kontaktinformationen findest du am Ende dieser Seite.</p>
+            <p class="subtxt">Was biete ich?</p>
+            <p class="subtxt">Eine klare Transparenz der Leistungen und Kosten sind für mich ebenso
+                ein Muss, wie die passende Stimmung auf der dazugehörigen Feier.</p>
+            <p class="subtxt">Auf der rechten Seite findest du zwei individuelle Pakete, welche insgesamt
+                auf unterschiedliche Veranstaltungen zugeschnitten sind. Zusätzlich hast du natürlich die
+                Möglichkeit weitere Services jeweils in den Paketen hinzu zu buchen. Hierfür kannst du meinen
+                Konfigurator verwenden.</p>
+            <p class="subtxt">Sollte einmal nicht das Passende für dich dabei sein, kannst du mir immer gerne
+                direkt eine E-Mail zukommen lassen oder mich telefonisch kontaktieren.</p>
+            <p class="subtxt">Viel Spass bei der Auswahl!</p>
 
             <router-link to="/anreise"><img src="../assets/arrow-down.svg" class="arrow arrow-down"></router-link>
         </div>
 
         <div class="right-content">
             <div class="hochzeit">
-                <img class="img1" src="../assets/rings.png">
+                <img class="imgRinge" src="../assets/rings.png">
                 <p class="header centered">PAKET "HOCHZEIT"</p>
                 <ul>
                     <li>persönliches Kennenlernen mit Planung und Besprechung der Hochzeit</li>
@@ -43,7 +61,7 @@
                 <p class="header centered">PAKETPREIS (OHNE ANFAHRT + TRANSPORT) <br> 650€</p>
             </div>
             <div class="geburtstag">
-                <img class="img2" src="../assets/baloon.png">
+                <img class="imgBallon" src="../assets/baloon.png">
                 <p class="header centered">PAKET "GEBURTSTAG/PARTY"</p>
                 <ul>
                     <li>Anfahrt am Nachmittag der Veranstaltung (siehe Abschnitt
@@ -60,6 +78,7 @@
             </div>
         </div>
     </div>
+    </div>
 </template>
 
 <script>
@@ -69,21 +88,19 @@
 </script>
 
 <style scoped>
-    .img1 {
+    .imgRinge {
         display: block;
         margin-left: auto;
         margin-right: auto;
-        width: 150px;
+        width: 100px;
         height: auto;
-        padding: 0px 50px 0px 50px;
     }
 
-    .img2 {
+    .imgBallon {
         display: block;
         margin-left: auto;
         margin-right: auto;
-        width: 150px;
+        width: 100px;
         height: auto;
-        padding: 0px 50px 0px 50px;
     }
 </style>

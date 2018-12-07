@@ -7,9 +7,15 @@ export default new Router({
     routes: [
         {
             path: '/',
-            name: 'home',
+            name: 'homeMain',
             // which is lazy-loaded when the route is visited.
-            component: () => import(/* webpackChunkName: "about" */ './views/Home.vue')
+            component: () => import(/* webpackChunkName: "about" */ './views/HomeMain.vue')
+        },
+        {
+            path: '/musictrunk',
+            name: 'musictrunk',
+            // which is lazy-loaded when the route is visited.
+            component: () => import(/* webpackChunkName: "about" */ './views/HomeMusictrunk.vue')
         },
         {
             path: '/uebermich',

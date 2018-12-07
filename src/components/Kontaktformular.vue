@@ -12,7 +12,7 @@
         <p>Nachricht: <br>
             <textarea class="textarea" v-model="nachricht" title="Nachricht"/>
         </p>
-        <img class="buttonTermin" src="../assets/button-termin.svg" @click="sendMessage">
+        <img class="buttonTermin button" src="../assets/button-termin.svg" @click="sendMessage">
         Rückmeldung-TEST : {{ response }}
     </form>
 </template>
@@ -65,5 +65,10 @@
     .textarea {
         width: 500px;
         height: 200px;
+    }
+
+    .buttonTermin {
+        width: 150px;
+        height: auto;
     }
 </style>

@@ -12,7 +12,7 @@ body {
   display: grid;
   grid-template-columns: 100%;
   justify-items: center;
-  align-items: center;
+  padding-top: 10px;
   grid-template-areas: "iface";
   background: #FAFAFA;
   font-family: 'Montserrat', sans-serif;
@@ -113,7 +113,7 @@ p {
 }
 
 .main-content {
-  height: 100%;
+  height: 100vh;
   display: grid;
   grid-template-columns: 42% auto;
   grid-template-areas: "left right";
@@ -128,10 +128,15 @@ p {
 
   }
 
+  .right-content-light {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+  }
+
   .right-content {
     background: $background;
     display: grid;
-    grid-template-columns: auto;
     justify-items: center;
     align-items: center;
 
@@ -168,7 +173,7 @@ p {
     }
 
     .hochzeit {
-      margin-top: 80px;
+      margin-top: 100px;
     }
 
     .geburtstag {
@@ -180,6 +185,17 @@ p {
       margin-left: 16px;
       margin-right: 16px;
     }
+  }
+
+  .mainPage-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 400px;
+    text-align: center;
+    color: white;
   }
 
   //////////////////////////////////////// Arrow navigation
@@ -200,24 +216,6 @@ p {
   .arrow-down {
     bottom: 80px;
   }
-
-  .arrow:hover {
-    animation: arrowAnim 1s forwards;
-    opacity: 0;
-  }
-
-  @keyframes arrowAnim {
-    from {
-      opacity: 0;
-      //transform: translateY(100px);
-    }
-    to {
-      opacity: 100;
-      //transform: translateY(0);
-    }
-  }
-
-
 
   /////////////////////////////////////// Page animation on the page
 
@@ -284,4 +282,31 @@ p {
 
 .centered {
   text-align: center;
+}
+
+.logoImageSmall {
+  width: 200px;
+  height: auto;
+}
+
+.logoNavMusictrunk {
+  width: 100px;
+  height: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+////////////////////////////////// button
+
+.button {
+  border: none;
+  text-align: center;
+  font-size: 28px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button:hover {
+  transform: scale(1.1) perspective(1px);
+  box-shadow: 0 4px 8px 0 white, 0 1px 20px 0 white;
 }
