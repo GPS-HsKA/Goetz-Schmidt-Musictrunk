@@ -30,13 +30,6 @@
 
                 <p class="subtxt">Wie komme ich zu dir?</p>
 
-                <router-link to="/terminkalender"><img src="../assets/arrow-down.svg" class="arrow arrow-down"></router-link>
-            </div>
-
-            <div class="right-content">
-                <div>
-                    <img class="img1" src="../assets/kompass.jpg">
-                </div>
                 <div class="anreise">
                     Du kommst nicht aus der Nähe?
                     <br>
@@ -57,8 +50,11 @@
                     <router-link to="/terminkalender">Terminkalender</router-link>
                     an, dann kann ich dir ein individuelles Angebot zukommen lassen oder dir weitere Informationen senden.
                 </div>
-                <div class="anreise">
-                </div>
+
+                <router-link to="/terminkalender"><img src="../assets/arrow-down.svg" class="arrow arrow-down"></router-link>
+            </div>
+
+            <div class="right-content backgroundAnreise">
             </div>
         </div>
     </div>
@@ -71,6 +67,12 @@
 </script>
 
 <style scoped>
+    .backgroundAnreise {
+        display: block;
+        background: url('../assets/anreiseBackground.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
     .img1 {
         width: 400px;
         height: auto;

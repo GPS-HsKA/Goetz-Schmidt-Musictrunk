@@ -33,7 +33,7 @@
                 <p class="subtxt">Auf der rechten Seite findest du alle meine kommenden Termine und kannst
                     bequem einen passenden Zeitpunkt auswählen.</p>
 
-                <Kontaktformular class="kontakt" :selected-date="selectedDate"></Kontaktformular>
+                <Kontaktformular class="kontakt" :selected-date="selectedDateValue"></Kontaktformular>
             </div>
 
 
@@ -62,7 +62,6 @@
     import {CalendarView, CalendarViewHeader} from '../../node_modules/vue-simple-calendar';
     import Kontaktformular from '../components/Kontaktformular';
 
-
     require('../../node_modules/vue-simple-calendar/static/css/default.css');
     require('../../node_modules/vue-simple-calendar/static/css/holidays-us.css');
 
@@ -79,9 +78,11 @@
                 showDate: new Date(),
                 events: [
                     {startDate: '2018-11-16', title: 'Gebucht'},
-                    {startDate: '2018-11-22', title: 'Gebucht'},
-                    {startDate: '2019-02-16', title: 'Gebucht'}],
-                selectedDate: this.showDate
+                    {startDate: '2018-12-20', endDate: '2019-01-01', title: 'Winterpause'},
+                    {startDate: '2019-02-17', title: 'Gebucht'},
+                    {startDate: '2019-02-18', title: 'Gebucht'}],
+                selectedDate: this.showDate,
+                selectedDateValue: ''
             };
         },
         methods: {
@@ -89,7 +90,22 @@
                 this.showDate = day;
             },
             dateClicked (date) {
+                date = this.parseDate(date);
                 this.selectedDate = date;
+            },
+            parseDate(date) {
+                var today = new Date(date);
+                var dd = today.getDate();
+                var mm = today.getMonth()+1;
+                var yyyy = today.getFullYear();
+                if(dd<10) {
+                    dd='0'+dd
+                }
+                if(mm<10) {
+                    mm='0'+mm
+                }
+                today = dd+'.'+mm+'.'+yyyy;
+                this.selectedDateValue = today;
             }
         }
     };
@@ -104,5 +120,6 @@
         margin-top: 200px;
         margin-left: auto;
         margin-right: auto;
+        cursor: pointer;
     }
 </style>

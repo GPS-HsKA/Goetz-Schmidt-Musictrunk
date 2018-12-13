@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "dns": "^0.2.2",
+    "moment": "^2.23.0",
     "vue": "^2.5.17",
     "vue-js-popover": "^1.1.7",
     "vue-picture-swipe": "^0.4.0",
@@ -25,6 +27,7 @@
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0-0",
     "file-loader": "^2.0.0",
+    "json-loader": "^0.5.7",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.1",
     "vue-template-compiler": "^2.5.17"

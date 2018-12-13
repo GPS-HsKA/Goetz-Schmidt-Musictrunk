@@ -65,7 +65,7 @@
     .imgReferenzen1 {
         width: 300px;
         height: auto;
-        padding-top: 80px;
+        padding-top: 30px;
     }
 
     .imgReferenzen2 {
