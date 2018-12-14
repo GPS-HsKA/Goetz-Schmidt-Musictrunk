@@ -24,7 +24,7 @@ a {
 }
 
 p {
-  line-height: 25px;
+  line-height: 20px;
 }
 
 #app {
@@ -170,6 +170,7 @@ p {
       overflow-y: scroll;
       max-height: 800px;
       padding: 10px;
+      margin-top: 20px;
     }
 
     .hochzeit {
@@ -191,9 +192,9 @@ p {
     justify-content: space-evenly;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 400px;
+    margin-top: -60px;
     text-align: center;
-    color: white;
+    color: black;
   }
 
   //////////////////////////////////////// Arrow navigation
@@ -306,5 +307,4 @@ p {
 
 .button:hover {
   transform: scale(1.1) perspective(1px);
-  box-shadow: 0 4px 8px 0 white, 0 1px 20px 0 white;
 }

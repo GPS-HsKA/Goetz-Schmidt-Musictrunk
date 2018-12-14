@@ -25,8 +25,11 @@
 <style scoped>
     .img1 {
         display: block;
+        max-height: 80vh;
+        max-width: 100vh;
+        margin: 100px auto auto auto;
         background: url('../assets/welcomePage.jpg');
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: contain;
     }
 </style>

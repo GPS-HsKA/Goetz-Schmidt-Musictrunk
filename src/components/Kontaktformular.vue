@@ -10,8 +10,15 @@
             <p>E-Mail Adresse: <br>
                 <input v-model="userInput.email" title="E-Mail"/>
             </p>
+            <p>
+                <input id="checkboxData" type="checkbox" v-model="checkBox" title="Datenschutz">
+                <label for="checkboxData">Ich habe die
+                    <router-link to="/Datenschutz">Datenschutzvereinbarung</router-link>
+                    gelesen und akzeptiert</label>
+            </p>
             <p id="messageContainer">Nachricht: <br>
-                <textarea class="textarea" v-model="userInput.message" title="Nachricht"></textarea>
+                <textarea placeholder="Bitte gib hier deine Nachricht ein ..." class="textarea" v-model="userInput.message"
+                          title="Nachricht"></textarea>
             </p>
             <img class="buttonTermin button" src="../assets/button-termin.svg" @click="sendMessage">
             <br>
@@ -30,7 +37,8 @@
         data () {
             return {
                 userInput: {},
-                response: ''
+                response: '',
+                checkBox: false
             };
         },
         props: {
@@ -41,7 +49,8 @@
                 if (this.userInput.name === '' |
                     this.userInput.email === '' |
                     this.userInput.message === '' |
-                    this.selectedDate === '') {
+                    this.selectedDate === '' |
+                    !this.checkBox) {
                     this.showToast();
                     return;
                 }
@@ -68,10 +77,11 @@
                 alert('Bitte fülle alle erforderlichen Felder aus!');
             },
             resetValues () {
-                this.userInput.name === '';
-                this.userInput.email === '';
-                this.userInput.message === '';
-                this.selectedDate === '';
+                this.userInput.name = ' ';
+                this.userInput.email = ' ';
+                this.userInput.message = ' ';
+                this.selectedDate = ' ';
+                this.checkBox = false;
             }
         }
     };
@@ -82,7 +92,7 @@
         display: grid;
         grid-template-columns: [first] auto [eingabe] auto [message];
         grid-template-rows: [row1-start] 25% [row1-end] auto [third-line] auto [last-line];
-        grid-column-gap: 15px;
+        grid-column-gap: 5px;
     }
 
     #messageContainer {

@@ -32,6 +32,9 @@
             <br>
             <br>
             <p class="headertxtLarge">DJ Musictrunk</p>
+            <br>
+            <br>
+            <router-link to="/terminkalender"><img class="buttonTermin button" src="../assets/button-termin.svg"></router-link>
         </div>
 
     </div>
