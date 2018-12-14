@@ -79,8 +79,18 @@
                 events: [
                     {startDate: '2018-11-16', title: 'Gebucht'},
                     {startDate: '2018-12-20', endDate: '2019-01-01', title: 'Winterpause'},
-                    {startDate: '2019-02-17', title: 'Gebucht'},
-                    {startDate: '2019-02-18', title: 'Gebucht'}],
+                    {startDate: '2019-02-16', title: 'Gebucht'},
+                    {startDate: '2019-02-18', endDate: '2019-02-24', title: 'Urlaub'},
+                    {startDate: '2019-02-08', endDate: '2019-02-10', title: 'Geblockt'},
+                    {startDate: '2019-03-01', endDate: '2019-03-03', title: 'Geblockt'},
+                    {startDate: '2019-03-08', endDate: '2019-03-10', title: 'Geblockt'},
+                    {startDate: '2019-03-22', endDate: '2019-03-24', title: 'Geblockt'},
+                    {startDate: '2019-05-24', endDate: '2019-05-16', title: 'Urlaub'},
+                    {startDate: '2019-08-17', title: 'Gebucht'},
+                    {startDate: '2019-09-07', title: 'Gebucht'},
+                    {startDate: '2019-09-14', title: 'Gebucht'},
+                    {startDate: '2019-08-31', title: 'Gebucht'},
+                    {startDate: '2019-10-25', endDate: '2019-11-03', title: 'Urlaub'},],
                 selectedDate: this.showDate,
                 selectedDateValue: ''
             };

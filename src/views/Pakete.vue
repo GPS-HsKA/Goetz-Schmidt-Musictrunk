@@ -6,19 +6,19 @@
             </div>
             <ul>
                 <li>
-                    <router-link to="/uebermich">Über mich</router-link>
+                    <router-link to="/uebermich" class="button">Über mich</router-link>
                 </li>
                 <li>
-                    <router-link to="/referenzen">Referenzen</router-link>
+                    <router-link to="/referenzen" class="button">Referenzen</router-link>
                 </li>
                 <li>
-                    <router-link to="/pakete">Pakete</router-link>
+                    <router-link to="/pakete" class="button">Pakete</router-link>
                 </li>
                 <li>
-                    <router-link to="/anreise">Anreise</router-link>
+                    <router-link to="/anreise" class="button">Anreise</router-link>
                 </li>
                 <li>
-                    <router-link to="/terminkalender">Terminkalender</router-link>
+                    <router-link to="/terminkalender" class="button">Terminkalender</router-link>
                 </li>
             </ul>
         </nav>
@@ -38,6 +38,10 @@
             <p class="subtxt">Sollte einmal nicht das Passende für dich dabei sein, kannst du mir immer gerne
                 direkt eine E-Mail zukommen lassen oder mich telefonisch kontaktieren.</p>
             <p class="subtxt">Viel Spass bei der Auswahl!</p>
+            <br>
+            <br>
+            <router-link to="/konfigurator"><img class="buttonTermin button" src="../assets/buttonKonfig.jpg"></router-link>
+            <p>In Kürze verfügbar!</p>
 
             <router-link to="/anreise"><img src="../assets/arrow-down.svg" class="arrow arrow-down"></router-link>
         </div>
