@@ -3,7 +3,7 @@
         <div>
             <nav>
                 <div>
-                    <router-link to="/musictrunk"><img src="../assets/logoMusictrunk.jpg" class="logoNavMusictrunk button"></router-link>
+                    <router-link to="/musictrunk"><img src="../../assets/logoMusictrunk.jpg" class="logoNavMusictrunk button"></router-link>
                 </div>
                 <ul>
                     <li>
@@ -51,7 +51,7 @@
                     Ich freu mich auf deine Anfrage!
                     <br>
                     <br>
-                    <router-link to="/terminkalender"><img class="buttonTermin button" src="../assets/buttonTermin.jpg"></router-link>
+                    <button><router-link to="/terminkalender"></router-link>Termin vereinbaren</button>
                 </div>
             </div>
         </div>
@@ -67,7 +67,7 @@
 <style>
     .backgroundMusictrunk {
         display: block;
-        background: url('../assets/background.jpg');
+        background: url('../../assets/background.jpg');
         background-repeat: no-repeat;
         background-size: cover;
     }

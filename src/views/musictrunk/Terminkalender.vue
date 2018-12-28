@@ -2,7 +2,7 @@
     <div>
         <nav>
             <div>
-                <router-link to="/musictrunk"><img src="../assets/logoMusictrunk.jpg" class="logoNavMusictrunk button"></router-link>
+                <router-link to="/musictrunk"><img src="../../assets/logoMusictrunk.jpg" class="logoNavMusictrunk button"></router-link>
             </div>
             <ul>
                 <li>
@@ -26,7 +26,7 @@
             <div class="left-content slideUp">
                 <h2>Wann willst du feiern? ...</h2>
 
-                <router-link to="/anreise"><img src="../assets/arrow-up.svg" class="arrow arrow-up"></router-link>
+                <router-link to="/anreise"><img src="../../assets/arrow-up.svg" class="arrow arrow-up"></router-link>
 
                 <p class="subtxt">Ich biete dir hier die Möglichkeit einen Termin zu finden, an welchem ich
                     für deine Feier verfügbar sein kann.</p>
@@ -59,11 +59,11 @@
 </template>
 
 <script>
-    import {CalendarView, CalendarViewHeader} from '../../node_modules/vue-simple-calendar';
-    import Kontaktformular from '../components/Kontaktformular';
+    import {CalendarView, CalendarViewHeader} from '../../../node_modules/vue-simple-calendar/dist/CalendarView.umd';
+    import Kontaktformular from '../../components/Kontaktformular';
 
-    require('../../node_modules/vue-simple-calendar/static/css/default.css');
-    require('../../node_modules/vue-simple-calendar/static/css/holidays-us.css');
+    require('../../../node_modules/vue-simple-calendar/static/css/default.css');
+    require('../../../node_modules/vue-simple-calendar/static/css/holidays-us.css');
 
     export default {
         name: 'terminkalender',

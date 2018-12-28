@@ -10,8 +10,13 @@
             <div>
                 Portfolio
                 <br>
-                <img src="../assets/bannerGoetz.jpg" class="logoImageSmall button">
+                <router-link to="/goetz"><img src="../assets/bannerGoetz.jpg" class="logoImageSmall button"></router-link>
             </div>
+        </div>
+        <div class="socialIcons">
+            <img class="icon button" src="../assets/Instagram.svg"/>
+            <img class="icon button" src="../assets/Youtube.svg"/>
+            <img class="icon button" src="../assets/LinkedIn.svg"/>
         </div>
     </div>
 </template>
@@ -31,5 +36,19 @@
         background: url('../assets/welcomePage.jpg');
         background-repeat: no-repeat;
         background-size: contain;
+    }
+
+    .socialIcons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-top: 600px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .icon {
+        width: 50px;
+        height: 50px;
     }
 </style>

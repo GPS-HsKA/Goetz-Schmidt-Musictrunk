@@ -13,7 +13,9 @@
             |
             <router-link to="/datenschutz" id="datenschutz">Datenschutz</router-link>
             <br>
-            &copy; musictrunk.de | goetz-schmidt.de <br> v.1.1.2019
+            &copy; <router-link to="/musictrunk">musictrunk.de</router-link> | <router-link to="/goetz">goetz-schmidt.de</router-link>
+            <br>
+            v.1.2.2019
         </div>
     </div>
 </template>

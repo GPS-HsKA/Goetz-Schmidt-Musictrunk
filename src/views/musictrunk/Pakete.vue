@@ -2,7 +2,7 @@
     <div>
         <nav>
             <div>
-                <router-link to="/musictrunk"><img src="../assets/logoMusictrunk.jpg" class="logoNavMusictrunk button"></router-link>
+                <router-link to="/musictrunk"><img src="../../assets/logoMusictrunk.jpg" class="logoNavMusictrunk button"></router-link>
             </div>
             <ul>
                 <li>
@@ -26,7 +26,7 @@
         <div class="left-content slideUp">
             <h1>Pakete ...</h1>
 
-            <router-link to="/referenzen"><img src="../assets/arrow-up.svg" class="arrow arrow-up"></router-link>
+            <router-link to="/referenzen"><img src="../../assets/arrow-up.svg" class="arrow arrow-up"></router-link>
 
             <p class="subtxt">Was biete ich?</p>
             <p class="subtxt">Eine klare Transparenz der Leistungen und Kosten sind für mich ebenso
@@ -40,15 +40,15 @@
             <p class="subtxt">Viel Spass bei der Auswahl!</p>
             <br>
             <br>
-            <router-link to="/konfigurator"><img class="buttonTermin button" src="../assets/buttonKonfig.jpg"></router-link>
+            <button><router-link to="/konfigurator"></router-link>Konfigurator</button>
             <p>In Kürze verfügbar!</p>
 
-            <router-link to="/anreise"><img src="../assets/arrow-down.svg" class="arrow arrow-down"></router-link>
+            <router-link to="/anreise"><img src="../../assets/arrow-down.svg" class="arrow arrow-down"></router-link>
         </div>
 
         <div class="right-content">
             <div class="hochzeit">
-                <img class="imgRinge" src="../assets/rings.png">
+                <img class="imgRinge" src="../../assets/rings.png">
                 <p class="header centered">PAKET "HOCHZEIT"</p>
                 <ul>
                     <li>persönliches Kennenlernen mit Planung und Besprechung der Hochzeit</li>
@@ -65,7 +65,7 @@
                 <p class="header centered">PAKETPREIS (OHNE ANFAHRT + TRANSPORT) <br> 650€</p>
             </div>
             <div class="geburtstag">
-                <img class="imgBallon" src="../assets/baloon.png">
+                <img class="imgBallon" src="../../assets/baloon.png">
                 <p class="header centered">PAKET "GEBURTSTAG/PARTY"</p>
                 <ul>
                     <li>Anfahrt am Nachmittag der Veranstaltung (siehe Abschnitt

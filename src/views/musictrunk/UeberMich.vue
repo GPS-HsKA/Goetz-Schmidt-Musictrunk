@@ -2,7 +2,7 @@
     <div>
         <nav>
             <div>
-                <router-link to="/musictrunk"><img src="../assets/logoMusictrunk.jpg" class="logoNavMusictrunk button"></router-link>
+                <router-link to="/musictrunk"><img src="../../assets/logoMusictrunk.jpg" class="logoNavMusictrunk button"></router-link>
             </div>
             <ul>
                 <li>
@@ -26,7 +26,7 @@
             <div class="left-content slideUp">
                 <h1>Über mich ...</h1>
 
-                <router-link to="/"><img src="../assets/arrow-up.svg" class="arrow arrow-up"></router-link>
+                <router-link to="/"><img src="../../assets/arrow-up.svg" class="arrow arrow-up"></router-link>
 
                 <p class="subtxt">Gestatten, ... Götz Schmidt</p>
                 <p class="subtxt">Seit nun fast zehn Jahren bin ich auf diversen Hochzeiten, Geburtstagen und
@@ -44,12 +44,12 @@
                     unverbindlichen Gespräch an.</p>
                 <p class="subtxt">Alle nötigen Kontaktinformationen findest du am Ende dieser Seite.</p>
 
-                <router-link to="/referenzen"><img src="../assets/arrow-down.svg" class="arrow arrow-down"></router-link>
+                <router-link to="/referenzen"><img src="../../assets/arrow-down.svg" class="arrow arrow-down"></router-link>
             </div>
 
             <div class="right-content">
-                <img class="imgReferenzen1" src="../assets/ueberMich.jpg">
-                <img class="imgReferenzen2" src="../assets/ueberMich2.jpg">
+                <img class="imgReferenzen1" src="../../assets/ueberMich.jpg">
+                <img class="imgReferenzen2" src="../../assets/ueberMich2.jpg">
             </div>
         </div>
     </div>

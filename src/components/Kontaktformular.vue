@@ -20,7 +20,7 @@
                 <textarea placeholder="Bitte gib hier deine Nachricht ein ..." class="textarea" v-model="userInput.message"
                           title="Nachricht"></textarea>
             </p>
-            <img class="buttonTermin button" src="../assets/buttonNachricht.jpg" @click="sendMessage">
+            <button @click="sendMessage">Termin vereinbaren</button>
             <br>
             <br>
             {{ response }}

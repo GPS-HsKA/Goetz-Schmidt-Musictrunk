@@ -2,7 +2,7 @@
     <div>
         <nav>
             <div>
-                <router-link to="/musictrunk"><img src="../assets/logoMusictrunk.jpg" class="logoNavMusictrunk button"></router-link>
+                <router-link to="/musictrunk"><img src="../../assets/logoMusictrunk.jpg" class="logoNavMusictrunk button"></router-link>
             </div>
             <ul>
                 <li>
@@ -26,7 +26,7 @@
             <div class="left-content slideUp">
                 <h1>Anreise ...</h1>
 
-                <router-link to="/pakete"><img src="../assets/arrow-up.svg" class="arrow arrow-up"></router-link>
+                <router-link to="/pakete"><img src="../../assets/arrow-up.svg" class="arrow arrow-up"></router-link>
 
                 <p class="subtxt">Wie komme ich zu dir?</p>
 
@@ -51,7 +51,7 @@
                     an, dann kann ich dir ein individuelles Angebot zukommen lassen oder dir weitere Informationen senden.
                 </div>
 
-                <router-link to="/terminkalender"><img src="../assets/arrow-down.svg" class="arrow arrow-down"></router-link>
+                <router-link to="/terminkalender"><img src="../../assets/arrow-down.svg" class="arrow arrow-down"></router-link>
             </div>
 
             <div class="right-content backgroundAnreise">
@@ -69,7 +69,7 @@
 <style scoped>
     .backgroundAnreise {
         display: block;
-        background: url('../assets/anreiseBackground.jpg');
+        background: url('../../assets/anreiseBackground.jpg');
         background-repeat: no-repeat;
         background-size: cover;
     }

@@ -2,7 +2,7 @@
     <div>
         <nav>
             <div>
-                <router-link to="/musictrunk"><img src="../assets/logoMusictrunk.jpg" class="logoNavMusictrunk button"></router-link>
+                <router-link to="/musictrunk"><img src="../../assets/logoMusictrunk.jpg" class="logoNavMusictrunk button"></router-link>
             </div>
             <ul>
                 <li>
@@ -26,7 +26,7 @@
             <div class="left-content slideUp">
                 <h1>Meine Referenzen ...</h1>
 
-                <router-link to="/uebermich"><img src="../assets/arrow-up.svg" class="arrow arrow-up"></router-link>
+                <router-link to="/uebermich"><img src="../../assets/arrow-up.svg" class="arrow arrow-up"></router-link>
 
                 <p class="subtxt">Was erwartet dich?</p>
 
@@ -54,7 +54,7 @@
                     <li>Funkmikrofon</li>
                 </ul>
 
-                <router-link to="/pakete"><img src="../assets/arrow-down.svg" class="arrow arrow-down"></router-link>
+                <router-link to="/pakete"><img src="../../assets/arrow-down.svg" class="arrow arrow-down"></router-link>
             </div>
 
             <div class="right-content">
@@ -68,7 +68,7 @@
 </template>
 
 <script>
-    import VuePictureSwipe from '../../node_modules/vue-picture-swipe';
+    import VuePictureSwipe from '../../../node_modules/vue-picture-swipe/src/main';
 
     export default {
         name: 'referenzen',
