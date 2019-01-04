@@ -2,25 +2,25 @@
     <form class="contactForm" title="Kontaktformular">
         <div>
             <p>Name: <br>
-                <input v-model="userInput.name" title="Name"/>
+                <input type="text" v-model="userInput.name" title="Name" required/>
             </p>
             <p>Datum: <br>
-                <input placeholder="Bitte im Kalender wählen" v-model="selectedDate" title="Termin"/>
+                <input placeholder="Bitte im Kalender wählen" v-model="selectedDate" title="Termin" required/>
             </p>
             <p>E-Mail Adresse: <br>
-                <input v-model="userInput.email" title="E-Mail"/>
+                <input v-model="userInput.email" title="E-Mail" required/>
             </p>
             <p>
-                <input id="checkboxData" type="checkbox" v-model="checkBox" title="Datenschutz">
+                <input id="checkboxData" type="checkbox" v-model="checkBox" title="Datenschutz" required>
                 <label for="checkboxData">Ich habe die
                     <router-link to="/Datenschutz">Datenschutzvereinbarung</router-link>
                     gelesen und akzeptiert</label>
             </p>
             <p id="messageContainer">Nachricht: <br>
-                <textarea placeholder="Bitte gib hier deine Nachricht ein ..." class="textarea" v-model="userInput.message"
+                <textarea placeholder="Bitte gib hier deine Nachricht ein ..." class="textarea" v-model="userInput.text"
                           title="Nachricht"></textarea>
             </p>
-            <button @click="sendMessage">Termin vereinbaren</button>
+            <img class="buttonTermin button" src="../assets/buttonNachricht.jpg" @click="sendMessage">
             <br>
             <br>
             {{ response }}
@@ -48,7 +48,7 @@
             sendMessage () {
                 if (this.userInput.name === '' |
                     this.userInput.email === '' |
-                    this.userInput.message === '' |
+                    this.userInput.text === '' |
                     this.selectedDate === '' |
                     !this.checkBox) {
                     this.showToast();
@@ -59,8 +59,9 @@
                     name: this.userInput.name,
                     email: this.userInput.email,
                     date: trimSelectedDate,
-                    text: this.userInput.message
+                    text: this.userInput.text
                 };
+                console.log('this.userInput:', this.userInput);
                 axios({
                     method: 'POST',
                     'url': 'send-mail.php',
@@ -68,10 +69,11 @@
                     'headers': {'content-type': 'text/plain'}
                 }).then(result => {
                     this.response = result.data;
+                    this.resetValues();
                 }, error => {
                     console.error(error);
+                    this.resetValues();
                 });
-                this.resetValues();
             },
             showToast () {
                 alert('Bitte fülle alle erforderlichen Felder aus!');
@@ -79,7 +81,7 @@
             resetValues () {
                 this.userInput.name = ' ';
                 this.userInput.email = ' ';
-                this.userInput.message = ' ';
+                this.userInput.text = ' ';
                 this.selectedDate = ' ';
                 this.checkBox = false;
             }

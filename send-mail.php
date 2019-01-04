@@ -9,10 +9,10 @@ $name = $_POST['name'];
 $date = $_POST['date'];
 $email = $_POST['email'];
 $text = $_POST['text'];
-$message = 'Neue DJ Anfrage von ' . $name . '\n' . $email . '\n' . $text . '\n Veranstaltung am: ' . $date;
+$message = 'Neue DJ Anfrage von ' . $name . ' --- ' . $email . ' --- ' . $text . ' --- ' . 'Veranstaltung am: ' . $date;
 $from = "info@goetz-schmidt.de";
 $headers = "From: $from";
 mail($to,$subject,$message,$headers);
-echo "Deine Nachricht wurde gesendet :-)";
+echo "Vielen Dank, deine Nachricht wurde gesendet.";
 
 ?>

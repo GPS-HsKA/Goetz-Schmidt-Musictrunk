@@ -22,9 +22,6 @@
         <div class="left-content"></div>
 
         <div class="right-content-light">
-            <p class="headertxtMedium">Willkommen</p>
-            <br>
-            <br>
             <p class="headertxtLarge">| Götz Phillipp Schmidt |</p>
             <br>
             <br>

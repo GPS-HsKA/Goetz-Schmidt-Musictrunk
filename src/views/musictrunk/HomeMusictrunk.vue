@@ -51,8 +51,7 @@
                     Ich freu mich auf deine Anfrage!
                     <br>
                     <br>
-                    <button><router-link to="/terminkalender"></router-link>Termin vereinbaren</button>
-                </div>
+                    <router-link to="/terminkalender"><img class="button" src="../../assets/buttonTermin.jpg"></router-link>                </div>
             </div>
         </div>
     </div>
